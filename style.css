@@ -1,0 +1,217 @@
+/* import fonts */
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+
+@import url(https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #faf8e8;
+}
+
+/* nav bar */
+.top-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 4px 130px;
+    background-color: #9f9585;
+    z-index: 9999;
+}
+
+.top-nav a{
+    color: white;
+    font-family: 'Roboto Mono';
+    font-size: 17px;
+    font-weight: bold;
+    padding: 8px 10px;
+    text-decoration: none;
+    
+}
+
+.top-nav a:hover {
+    background-color: #b7afa2;
+    transform: scale(1.1);
+    transition: 0.3 ease-in-out;
+    border-radius: 50px;
+}
+
+.top-nav img {
+    margin-right: 60px;
+    width: 16%;
+}
+
+/* dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 17px;
+    font-weight: bold; 
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; 
+    background-color: #b7afa2;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1001; 
+    border-radius: 12px;
+    overflow: hidden; 
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: white; 
+    padding: 12px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Roboto Mono', monospace;
+    transition: background 0.2s;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #b7afa2;
+    border-radius: 0; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #b7afa2;
+    transform: scale(1.1);
+}
+
+/* body */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 130px; 
+}
+
+.main-content {
+    flex: 3;
+    max-width: 1200px; 
+}
+
+.bigcard {
+    height: 300px;
+    background: #b7afa2;
+    border-radius: 35px;
+    margin-bottom: 30px; 
+    display: flex; 
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.bigcard img{
+    width: 40%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 20px;
+}
+
+.grid {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px; 
+}
+
+.gridcard {
+    flex: 1;
+    height: 150px;
+    background: #b7afa2;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    overflow: hidden;
+}
+
+/* Sidebar Layout */
+.sidebar {
+    flex: 1;
+    margin-left: 50px;
+    max-width: 300px;
+    /* This keeps the timeline visible while you scroll through news */
+    position: sticky;
+    top: 110px;
+}
+
+.sidebar-title {
+    color: #a64d4d;         /* Reddish color from your image */
+    font-family: 'Roboto Mono';
+    margin-bottom: 20px;
+}
+
+/* Timeline Logic */
+.timeline {
+    position: relative;
+    border-left: 2px solid #333; /* The vertical line */
+    padding-left: 30px;          /* Space between line and small cards */
+    margin-left: 10px;           /* Alignment offset */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;         /* Space between the small side cards */
+}
+
+/* The Dots on the line */
+.dot {
+    position: absolute;
+    left: -37px;                 /* Centers dot on the line */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #d4a373;   /* Tan/Orange color from image */
+    border-radius: 50%;
+}
+
+/* The small grey cards in the sidebar */
+.timeline-card {
+    height: 60px;
+    background-color: #ccc5b9;   /* Light grey color */
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* Responsive adjustment */
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;  /* Stacks timeline under cards on small screens */
+    }
+    .sidebar {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+}
