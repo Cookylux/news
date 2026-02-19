@@ -3,7 +3,7 @@
 
 @import url(https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap);
 
 html, body {
     margin: 0;
@@ -17,7 +17,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 530px; 
     column-gap: 1px;
-    margin: 0;
+    margin-top: 90px;
     padding: 0; 
     background-color: #faf8e8;
     box-sizing: border-box;
@@ -25,16 +25,16 @@ body {
 
 /* nav bar */
 .top-nav {
-    grid-column: 1 / span 2; 
-    position: sticky;
+    position: fixed;
     top: 0;
-    width: 100%; 
+    left: 0; 
+    width: 100%;
     height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    padding: 4px 60px;
+    padding: 0 60px;
     background-color: #9f9585;
     z-index: 9999;
 }
@@ -213,7 +213,7 @@ body {
 
 /* sidebar */
 .sidebar {
-    position: fixed;
+    position: absolute;
     top: 130px;
     right: 100px;
     width: 460px;
@@ -250,9 +250,98 @@ body {
 }
 
 .timeline-card {
-    height: 70px;
+    display: flex;
+    align-items: center;      /* Vertically centers the text */
+    padding: 10px 20px;       /* Pushes text away from the edges */
     background-color: #ccc5b9;
-    border-radius: 8px;
-    width: 100%;
+    border-radius: 12px;
+    height: 90px;             /* Fixed height like your image */
+    box-sizing: border-box;   /* Keeps the padding inside the 70px */
 }
 
+.timeline-card h2 {
+    font-family: 'Newsreader', serif;
+    font-size: 20px;
+    display: block;
+}
+
+.timeline-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* footer */
+.footer {
+    grid-column: 1 / span 2;
+    background-color: #9f9585;
+    color: white;
+    padding: 60px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 50px;
+}
+
+.footer-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-section img {
+    margin-right: 60px;
+    width: 90%;
+}
+
+/* Vertical Divider Lines */
+.footer-section:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    margin-right: 40px;
+    padding-right: 20px;
+}
+
+/* Middle Column Links */
+.footer-links {
+    flex-direction: row;
+    gap: 40px;
+}
+
+.link-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+/* Social Media Section */
+.footer-socials {
+    gap: 15px;
+}
+
+.footer-socials a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.footer-socials img {
+    width: 30px;
+    height: auto;
+}
