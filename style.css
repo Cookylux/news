@@ -251,12 +251,12 @@ body {
 
 .timeline-card {
     display: flex;
-    align-items: center;      /* Vertically centers the text */
-    padding: 10px 20px;       /* Pushes text away from the edges */
+    align-items: center;
+    padding: 10px 20px;
     background-color: #ccc5b9;
     border-radius: 12px;
-    height: 90px;             /* Fixed height like your image */
-    box-sizing: border-box;   /* Keeps the padding inside the 70px */
+    height: 90px;
+    box-sizing: border-box;
 }
 
 .timeline-card h2 {
