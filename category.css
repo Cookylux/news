@@ -124,6 +124,10 @@ body {
     grid-template-columns: repeat(3, 1fr); 
     gap: 60px;
 }
+.news-layout a{
+    text-decoration: none;
+    color: #000000;
+}
 
 .bigcard {
     grid-column: span 2;
@@ -131,14 +135,24 @@ body {
     border-radius: 40px;
     padding: 40px;
     display: flex;
-    align-items: flex-start;
-    height: 350px;
+    align-items: center;
+    height: 340px;
+    flex-direction: row;
+    overflow: hidden;
 }
 
 .bigcard img {
-    width: 55%;
+    width: 60%;
     border-radius: 25px;
+    max-height: 50%;
     margin-right: 35px;
+    justify-content: center;
+}
+
+.bigcard:hover{
+     transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bigcard h2 {
@@ -157,10 +171,17 @@ body {
     display: flex;
     height: 350px;
     flex-direction: column;
+    overflow: hidden;
+}
+.tall-card:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tall-card img {
     width: 100%;
+    max-height: 60%;
     border-radius: 25px;
     margin-bottom: 20px;
 }
@@ -176,12 +197,20 @@ body {
     min-height: 350px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+}
+
+.gridcard:hover{
+     transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gridcard img {
     width: 100%;
     border-radius: 25px;
     margin-bottom: 20px;
+    max-height: 70%;
 }
 
 .gridcard h2 {
@@ -254,11 +283,14 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 10px;
+    
     font-weight: bold;
 }
 
+.footer-socials a:hover{
+    opacity: 0.7;
+}
 .footer-socials img {
-    width: 30px;
+    width: 35px;
     height: auto;
 }
