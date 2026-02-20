@@ -23,6 +23,11 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 /* nav bar */
 .top-nav {
     position: fixed;
@@ -157,6 +162,7 @@ body {
     font-family: 'Newsreader', serif;
     margin: 10px 0;
     display: block; 
+    text-decoration: none;
 }
 
 .bigcard p {
@@ -164,7 +170,9 @@ body {
     font-size: 14px;
     line-height: 1.6;
     margin: 0;
+    text-decoration: none;
 }
+
 
 .bigcard:hover {
     transform: scale(1.02);
